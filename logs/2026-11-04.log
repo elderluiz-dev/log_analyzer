@@ -1,0 +1,8 @@
+2026-11-04 INFO Sistema iniciado
+2026-11-04 INFO Configurações carregadas
+2026-11-04 WARNING Espaço em disco abaixo de 20%
+2026-11-04 INFO Conexão com o banco de dados estabelecida
+2026-11-04 ERROR Falha ao consultar tabela de usuários
+2026-11-04 INFO Serviço de autenticação reiniciado
+2026-11-04 WARNING Tentativa de login com credenciais inválidas
+2026-11-04 INFO Sistema encerrado

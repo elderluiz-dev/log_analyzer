@@ -1,0 +1,9 @@
+2026-11-05 INFO Sistema iniciado
+2026-11-05 INFO Arquivo de configuração carregado
+2026-11-05 ERROR Não foi possível conectar ao servidor
+2026-11-05 WARNING Nova tentativa de conexão em andamento
+2026-11-05 INFO Conexão com o servidor restabelecida
+2026-11-05 WARNING Uso elevado de memória
+2026-11-05 ERROR Falha ao salvar relatório
+2026-11-05 INFO Relatório salvo após nova tentativa
+2026-11-05 INFO Sistema encerrado
