@@ -25,3 +25,51 @@ def init_log():
         return False
 
     return selected_file
+
+def filter_by_info(incoming_logs):
+    logs = incoming_logs.splitlines()
+    for log in logs:
+        if "INFO" in log:
+            print(f"{log}")
+    print("\n")
+
+def filter_by_warn(incoming_logs):
+    logs = incoming_logs.splitlines()
+    for log in logs:
+        if "WARNING" in log:
+            print(f"{log}")
+    print("\n")
+
+def filter_by_err(incoming_logs):
+    logs = incoming_logs.splitlines()
+    for log in logs:
+        if "ERROR" in log:
+            print(f"{log}")    
+    print("\n")
+
+def generate_repot(incoming_logs):
+    logs = incoming_logs.splitlines()
+
+    war = 0
+    info = 0
+    err = 0
+    
+    for log in logs:
+        if "INFO" in log:
+            info += 1
+        if "WARNING" in log:
+            war += 1
+        if "ERROR" in log:
+            err += 1
+
+    total = war + info + err
+
+    output_path = Path(__file__).parent / ".." / "reports"
+    output_file = Path(__file__).parent / ".." / "reports" / "report.txt"
+
+    output_path.mkdir(parents=True, exist_ok=True)
+    output_file.touch(exist_ok=True)
+
+    with open(output_file, "w", encoding='utf-8') as file:
+        file.write(f"Log Analyzer - Relatório\nTotal de ocorrências: {total}\n\n")
+        file.write(f"Total de infos: {info}\nTotal de warnings: {war}\nTotal de erros: {err}\n")

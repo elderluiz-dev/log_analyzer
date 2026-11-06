@@ -10,3 +10,12 @@ def main_menu():
     opt = input("> ")
 
     return opt
+
+def filter_menu():
+    print("Por qual categoria deseja filtrar:")
+    print("1. INFO")
+    print("2. WARNING")
+    print("3. ERROR")
+    opt = input("> ")
+
+    return opt

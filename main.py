@@ -22,10 +22,42 @@ def main():
             case "1":
                 clear_terminal()
                 show_log(logs)
+
+
+            case "2":
+                clear_terminal()
+                opt = filter_menu()
+                match opt:
+                    case "1":
+                        clear_terminal()
+                        filter_by_info(logs)
+                    case "2":
+                        clear_terminal()
+                        filter_by_warn(logs)
+                    case "3":
+                        clear_terminal()
+                        filter_by_err(logs)
+
+
+            case "3":
+                clear_terminal()
+                search = input("Digite a pesquisa: ")
+                clear_terminal()
+                search_in_logs(logs, search)
+
+
+            case "4":
+                clear_terminal()
+                generate_repot(logs)
+                print("Relatório gerado com sucesso!")
+                
+
             case "0":
                 clear_terminal()
                 print("Programa ecerrado pelo usuário")
                 break
+
+
             case _:
                 clear_terminal()
                 print("Opção inválida")
