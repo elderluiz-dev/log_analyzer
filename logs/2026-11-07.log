@@ -1,0 +1,11 @@
+2026-11-08 INFO Sistema iniciado
+2026-11-08 ERROR Falha ao abrir arquivo
+DATA_INVALIDA WARNING Uso elevado de memória
+2026-11-08 DEBUG Mensagem de depuração
+2026/11/08 INFO Formato de data incorreto
+2026-11-08 WARNING
+2026-11-08 Falha sem nível de severidade
+2026-11-08 ERROR Falha de conexão
+INFO Sistema iniciado sem data
+2026-13-45 ERROR Data inexistente
+2026-11-08 UNKNOWN Evento desconhecido

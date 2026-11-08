@@ -5,14 +5,15 @@ from lib.shows import *
 def main():
     clear_terminal()
 
-    selected_file = init_log()
-    if selected_file == False:
+    log_file = init_log()
+    if log_file == False:
         return
 
-    with open(selected_file, "r") as file:
+    with open(log_file, "r") as file:
         logs = file.read()
 
     clear_terminal()
+    review_log(logs)
     while True:
         infos = log_infos(logs)
         print(f"INFOS: {infos[0]} | WARNINGS: {infos[1]} | ERRORS: {infos[2]}\n")
@@ -25,6 +26,11 @@ def main():
 
 
             case "2":
+                clear_terminal()
+                filter_by_err(logs)
+
+
+            case "3":
                 clear_terminal()
                 opt = filter_menu()
                 match opt:
@@ -39,17 +45,17 @@ def main():
                         filter_by_err(logs)
 
 
-            case "3":
+            case "4":
                 clear_terminal()
                 search = input("Digite a pesquisa: ")
                 clear_terminal()
                 search_in_logs(logs, search)
 
 
-            case "4":
+            case "5":
                 clear_terminal()
                 generate_repot(logs)
-                print("Relatório gerado com sucesso!")
+                print("Relatório gerado com sucesso!\n")
                 
 
             case "0":

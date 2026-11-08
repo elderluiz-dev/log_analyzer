@@ -4,9 +4,11 @@ def clear_terminal():
 def main_menu():
     print("--- LOG ANALYZER ---")
     print("1. Exibir log completo")
-    print("2. Filtrar mensagens")
-    print("3. Pesquisar")
-    print("4. Gerar relatório")
+    print("2. Exibir erros mais recentes")
+    print("3. Filtrar mensagens")
+    print("4. Pesquisar")
+    print("5. Gerar relatório")
+    print("0. Sair")
     opt = input("> ")
 
     return opt

@@ -26,6 +26,20 @@ def init_log():
 
     return selected_file
 
+def review_log(incoming_logs):
+    logs = incoming_logs.splitlines()
+    for index, log in enumerate(logs):
+        if "INFO" in log or "WARNING" in log or "ERROR" in log:
+            continue
+        else:
+            print(f"Linha {index + 1} inválida!")
+
+        log_splited = log.split()
+        if len(log_splited) < 3:
+            print(f"Linha {index + 1} inválida!")
+    
+    print("\n")
+
 def filter_by_info(incoming_logs):
     logs = incoming_logs.splitlines()
     for log in logs:
